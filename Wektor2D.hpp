@@ -75,4 +75,4 @@ public:
     }
 };
 
-int Wektor2D::num_wek = 0;
+int num_wek = 0;
