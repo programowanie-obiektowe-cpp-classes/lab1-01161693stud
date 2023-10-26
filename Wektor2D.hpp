@@ -6,9 +6,7 @@ class Wektor2D {
 private:
     double x;
     double y;
-    static int num_wek; 
-
-    
+    static int num_wek;  
 
 public:
     Wektor2D() : x(0.0), y(0.0) {
@@ -33,7 +31,7 @@ public:
         return Wektor2D(x, y);
     }
 
-    static int population() {
+    static int populacja() {
         return num_wek;
     }
 
@@ -42,12 +40,12 @@ public:
         return os;
     }
 
-    Wektor2D operator+(const Wektor2D& other) const {
+    Wektor2D operator+(const Wektor2D& other){
         return Wektor2D(x + other.x, y + other.y);
     }
 
-    double operator*(const Wektor2D& other) {
-        return x * other.x, y * other.y;
+    double operator*(const Wektor2D& other){
+        return x * other.x + y * other.y;
     }
 
     double norm() const {
@@ -66,13 +64,13 @@ public:
         y = y_;
     }
 
-    double getX() {
+    double getX() const {
         return x;
     }
 
-    double getY() {
+    double getY() const {
         return y;
     }
 };
 
-int num_wek = 0;
+int Wektor2D::num_wek = 0;
